@@ -4,71 +4,82 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Enquiry Form - Royal Tech Solutions</title>
+    <meta name="description" content="Submit an enquiry for Royal Tech Solutions products or services. Request a quote or ask about IT support.">
+    <link href="css/style.css" rel="stylesheet">
 </head>
 <body>
-    <header>
-        <a href="index.html"><img src="images/royal-tech-logo.png" alt="Royal Tech Solutions logo" width="150" height="50"></a>
-        <!-- Keeping it to one nav -->
+    <header class="site-header">
+        <div class="logo-area">
+            <a href="index.html">
+                <img src="Images/royal-tech-logo.png" alt="Royal Tech Solutions logo" width="150" height="50">
+            </a>
+        </div>
         <nav>
-            <a href="index.html" target="_blank">Home</a> &nbsp;|&nbsp;
-            <a href="about.html" target="_blank">About</a> &nbsp;|&nbsp;
-            <a href="products.html" target="_blank">Products</a> &nbsp;|&nbsp;
-            <a href="enquiry.html" target="_blank">Enquiry</a> &nbsp;|&nbsp;
-            <a href="contact.html" target="_blank">Contact</a>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="products.html">Products</a></li>
+                <li><a href="enquiry.html">Enquiry</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
         </nav>
     </header>
 
     <main>
-        <h1>Request a Quote or Support</h1>
-        <p>Fill out the form below to make an enquiry about our products or services.</p>
+        <section class="enquiry-intro">
+            <h1>Request a Quote or Support</h1>
+            <p>Fill out the form below to make an enquiry about our products or services.</p>
+        </section>
         
         <!-- Building the form with proper labels -->
-        <form action="#" method="post">
-            <div>
-                <label for="fullname">Full Name:</label>
-                <input type="text" id="fullname" name="fullname" placeholder="Enter your full name" required>
-            </div>
-            <div>
-                <label for="email">Email Address:</label>
-                <input type="email" id="email" name="email" placeholder="example@domain.com" required>
-            </div>
-            <div>
-                <label for="phone">Phone Number:</label>
-                <input type="tel" id="phone" name="phone" placeholder="+27 11 234 5678" required>
-            </div>
-            <!-- Dropdown to select what they want -->
-            <div>
-                <label for="interest">I am interested in:</label>
-                <select id="interest" name="interest">
-                    <option value="">Select an option</option>
-                    <option value="it-support">IT Support & Maintenance</option>
-                    <option value="networking">Network & Server Setup</option>
-                    <option value="cloud">Cloud & Data Solutions</option>
-                    <option value="laptops">Business Laptops</option>
-                    <option value="accessories">Computer Accessories</option>
-                </select>
-            </div>
-            <div>
-                <label for="message">Your Message / Requirements:</label>
-                <textarea id="message" name="message" rows="5" placeholder="Tell us what you need assistance with..."></textarea>
-            </div>
-            <!-- Buttons to submit or reset -->
-            <div>
-                <button type="submit">Submit Enquiry</button>
-                <button type="reset">Clear Form</button>
-            </div>
-        </form>
+        <section class="quote-form-section">
+            <form class="quote-form" action="#" method="post">
+                <div class="form-group">
+                    <label for="fullname">Full Name:</label>
+                    <input type="text" id="fullname" name="fullname" placeholder="Enter your full name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email Address:</label>
+                    <input type="email" id="email" name="email" placeholder="example@domain.com" required>
+                </div>
+                <div class="form-group">
+                    <label for="phone">Phone Number:</label>
+                    <input type="tel" id="phone" name="phone" placeholder="+27 11 234 5678" required>
+                </div>
+                <!-- Dropdown to select what they want -->
+                <div class="form-group">
+                    <label for="interest">I am interested in:</label>
+                    <select id="interest" name="interest">
+                        <option value="">Select an option</option>
+                        <option value="it-support">IT Support and Maintenance</option>
+                        <option value="networking">Network and Server Setup</option>
+                        <option value="cloud">Cloud and Data Solutions</option>
+                        <option value="laptops">Business Laptops</option>
+                        <option value="accessories">Computer Accessories</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="message">Your Message or Requirements:</label>
+                    <textarea id="message" name="message" rows="5" placeholder="Tell us what you need assistance with..."></textarea>
+                </div>
+                <!-- Buttons to submit or reset -->
+                <div class="form-actions">
+                    <button type="submit">Submit Enquiry</button>
+                    <button type="reset">Clear Form</button>
+                </div>
+            </form>
+        </section>
     </main>
 
-    <footer>
+    <footer class="site-footer">
         <p>&copy; 2026 Royal Tech Solutions (Pty) Ltd. All rights reserved.</p>
         <p>Email: info@royaltechsolutions.co.za | Phone: +27 11 234 5678</p>
-            <div>
-                <a href="#" target="_blank" rel="noopener noreferrer">Facebook</a> |
-                <a href="#" target="_blank" rel="noopener noreferrer">Instagram</a> |
-                <a href="#" target="_blank" rel="noopener noreferrer">TikTok</a> |
-                <a href="#" target="_blank" rel="noopener noreferrer">YouTube</a>
-            </div>
+        <div class="social-links">
+            <a href="https://www.facebook.com/TechCrunch" target="_blank" rel="noopener noreferrer">Facebook</a> |
+            <a href="https://www.instagram.com/techcrunch" target="_blank" rel="noopener noreferrer">Instagram</a> |
+            <a href="https://www.tiktok.com/@techcrunch" target="_blank" rel="noopener noreferrer">TikTok</a> |
+            <a href="https://www.youtube.com/@techcrunch" target="_blank" rel="noopener noreferrer">YouTube</a>
+        </div>
     </footer>
 </body>
 </html>
