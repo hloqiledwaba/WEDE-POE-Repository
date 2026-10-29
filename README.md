@@ -19,49 +19,56 @@ DESKTOP
 
 
 
-  ## CHANGELOG
-**Part 1**
--STARTED WITH HTML...ADDED PICTURES,FOOTERS AND INFORMATION.
-- Built five linked pages
-- Used a consistent HTML5 structure on every page:
-- Used semantic elements: `<header>`, `<nav>`, `<main>`, `<section>`, `<article>` and `<footer>`.
-- Added a shared header on every page, with the logo linking to the homepage and a navigation menu (Home, About, Products, Enquiry, Contact) built as an unordered list.
-- Added a shared footer with copyright, email, phone and social media links. The social links open in a new tab using `target="_blank"` and `rel="noopener noreferrer"`.
-- **Home:** hero section with two call-to-action buttons and a grid of core services.
-- **About:** company introduction, mission and vision, history, core values list, team and office locations, and a founder profile with a photo.
-- **Products:** service cards and product cards, each with an image, description and price.
-- **Enquiry:** quote request form with text, email and phone inputs, a dropdown for the service of interest, and a message textarea.
-- **Contact:** contact details, an embedded Google Map of the head office, and a general message form.
-- Built the forms with `<label>` elements linked to inputs through `for` and `id`, and used `required` for validation and `placeholder` hints.
-- Added Submit and Reset buttons to each form.
-- Added `alt` text and `width` and `height` attributes to all images for accessibility and to prevent layout shift.
-- Added HTML comments to explain the main sections of the code.
+ # Royal Tech Solutions (Pty) Ltd - Website Project
 
-**Part 2**
-- Created a single external stylesheet, `css/style.css`, to style the whole website.
-- Linked the stylesheet in the `<head>` of all five pages
-  - `index.html`
-  - `about.html`
-  - `products.html`
-  - `enquiry.html`
-  - `contact.html`
-- Styled the shared header, navigation bar and footer once, so they look the same on every page.
-- Styled the page content using the existing HTML class names (for example `.hero-section`, `.service-card`, `.product-card`, `.quote-form` and `.contact-form`), so no HTML structure had to change.
-- Using one shared stylesheet makes the site easier to maintain, because a style change in one place updates every page.
+Student Name: Lehlohonolo Ledwaba
+Module: WEDE5020 - Web Development (Introduction)
+Part: 3 - Enhancing Functionality and SEO
 
-**REFERENCES**
-Boughton, J.M., 2002. The Bretton Woods proposal: a brief look. Political Science Quarterly, 42(6), p.564.
-Clark, J. and Macquarrie, D. (eds.), 2002. Handbook of Green Chemistry and Technology. Oxford: Blackwell Science.
-Marks & Spencer, 2004. The way forward, Annual report 2003-2004. [online] Available at: http://www-marks-and-spencer.co.uk/corporate/annual2003/ [Accessed 14 August 2026].
-Roulstone, A. (ed.), 2016. Disability and Technology. Basingstoke: Springer Netherlands.
-Smith, J., 1975. A source of information. In: W. Jones, ed., 2000. One hundred and one ways to find information about health. Oxford: Oxford University Press.
+## Project Overview
+This is a 5-page website for Royal Tech Solutions, an IT support and technology solutions company based in South Africa. The site showcases products and services, features an interactive map, and allows clients to submit enquiries.
 
-## **Updated list of references for Part 2**
-Berners-Lee, T. (2000) Weaving the Web: the original design and ultimate destiny of the World Wide Web by its inventor. New York: HarperCollins.
-Boughton, J.M. (2002) 'The Bretton Woods proposal: a brief look', Political Science Quarterly, 42(6), p. 564.
-Clark, J. and Macquarrie, D. (eds.) (2002) Handbook of Green Chemistry and Technology. Oxford: Blackwell Science.
-Duckett, J. (2011) HTML and CSS: design and build websites. Indianapolis: John Wiley & Sons.
-Marks & Spencer (2004) The way forward, Annual report 2003-2004. Available at: http://www-marks-and-spencer.co.uk/corporate/annual2003/ (Accessed: 14 August 2026).
-Roulstone, A. (ed.) (2016) Disability and Technology. Basingstoke: Springer Netherlands.
-Smith, J. (1975) 'A source of information', in Jones, W. (ed.) (2000) One hundred and one ways to find information about health. Oxford: Oxford University Press.
-W3C (2018) Web Content Accessibility Guidelines (WCAG) 2.1. Available at: https://www.w3.org/TR/WCAG21/ (Accessed: 18 September 2026).
+## Part 2 Feedback Addressed
+The Part 2 feedback highlighted several areas for improvement. Here is how I fixed them:
+
+*   **Navigation Menu (1/5)**: Replaced the basic vertical stack with a fully functional, animated hamburger menu for mobile screens, ensuring a seamless user experience across all devices.
+*   **External Stylesheet (5/10)**: Ensured `css/style.css` is correctly linked in the `<head>` of every single page.
+*   **Media Queries (7/10)**: Added a third breakpoint at 1024px for small laptops, alongside the existing tablet (768px) and mobile (480px) breakpoints.
+*   **Layout Structure (3/5)**: Improved the CSS Grid layout to ensure consistent spacing and alignment of cards across all screen sizes.
+*   **Images (3/5)**: Changed the folder path from `Images/` to `images/` (lowercase) and added `srcset` and `sizes` attributes for responsive image loading.
+*   **README & References (3/5 & 4/5)**: Completely rewrote the README to be comprehensive, detailed, and academically referenced.
+
+## Key Features (Part 3)
+*   **Interactive Elements**: Hamburger menu and an accordion on the Products page.
+*   **Interactive Maps**: Replaced the static iframe with a dynamic Leaflet Map on the Contact page.
+*   **Gallery Lightbox**: Added a lightbox so users can click and enlarge product images.
+*   **Search**: Added a live search bar to filter products.
+*   **Form Validation**: Both the Enquiry and Contact forms feature custom client-side validation with clear error messages.
+*   **Input Processing**: The Enquiry form calculates an estimated cost based on the selected service. The Contact form compiles a `mailto:` link for the user to send the email.
+*   **SEO**: Included `meta keywords`, `robots.txt`, and `sitemap.xml`.
+
+## File Structure
+```text
+royal-tech-solutions/
+|
+|-- index.html
+|-- about.html
+|-- products.html
+|-- enquiry.html
+|-- contact.html
+|-- README.md
+|
+|-- css/
+|   +-- style.css
+|
+|-- js/
+|   +-- script.js
+|
++-- images/
+    |-- royal-tech-logo.png
+    |-- founder-sarah.png
+    |-- service-support.png
+    |-- service-networking.png
+    |-- service-cloud.png
+    |-- product-laptop.png
+    +-- product-accessories.png
