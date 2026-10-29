@@ -22,7 +22,7 @@ DESKTOP
 Student Name: Lehlohonolo Ledwaba
 Module: WEDE5020 - Web Development (Introduction)
 Part: 3 - Enhancing Functionality and SEO
-
+Deploy link :https://royaltechsolution.netlify.app
 ## Project Overview
 This is a 5-page website for Royal Tech Solutions, an IT support and technology solutions company based in South Africa. The site showcases products and services, features an interactive map, and allows clients to submit enquiries.
 
