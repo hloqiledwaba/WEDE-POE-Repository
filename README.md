@@ -2,8 +2,6 @@
 My repository for my wede  POE
 
 
-**PART 1**
-
 **SITEMAP**
 <img width="2720" height="1800" alt="royal_tech_solutions_sitemap" src="https://github.com/user-attachments/assets/8606b531-c143-4e7c-9f9d-5bcc0fc9edeb" />
 
