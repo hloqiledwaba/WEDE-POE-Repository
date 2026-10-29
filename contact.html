@@ -5,16 +5,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact Us - Royal Tech Solutions</title>
     <meta name="description" content="Reach out to Royal Tech Solutions for IT support, product enquiries, or quotes. Visit our offices in Germiston and Makhado.">
+    <meta name="keywords" content="contact Royal Tech Solutions, IT support Germiston, tech company Makhado, customer service">
     <link href="css/style.css" rel="stylesheet">
+    <!-- Leaflet CSS for the interactive map -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
 </head>
 <body>
     <header class="site-header">
         <div class="logo-area">
             <a href="index.html">
-                <img src="Images/royal-tech-logo.png" alt="Royal Tech Solutions logo" width="150" height="50">
+                <img src="images/royal-tech-logo.png" srcset="images/royal-tech-logo.png 150w" sizes="150px" alt="Royal Tech Solutions logo" width="150" height="50">
             </a>
         </div>
-        <nav>
+        <button class="nav-toggle" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="main-nav">
+            <span class="hamburger-line"></span>
+            <span class="hamburger-line"></span>
+            <span class="hamburger-line"></span>
+        </button>
+        <nav id="main-nav">
             <ul>
                 <li><a href="index.html">Home</a></li>
                 <li><a href="about.html">About</a></li>
@@ -26,7 +34,7 @@
     </header>
 
     <main>
-        <section class="contact-details">
+        <section class="contact-details animate-on-scroll">
             <h1>Get in Touch With Us</h1>
             <p>We have multiple branches across South Africa. Reach out to us directly or visit one of our locations.</p>
 
@@ -48,18 +56,18 @@
             </div>
         </section>
 
-        <!-- Embedding the map for the Germiston office -->
-        <section class="map-section">
+        <!-- Part 3 Feature: Leaflet Interactive Map -->
+        <section class="map-section animate-on-scroll">
             <h2>Head Office Location</h2>
-            <div class="map-container">
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3582.6!2d28.15!3d-26.25!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1e9575f2e9a5e5f1%3A0x74c6a2f5a8f5d4e!2sGermiston%2C%20South%20Africa!5e0!3m2!1sen!2sza!4v1690000000000!5m2!1sen!2sza" allowfullscreen="" loading="lazy" width="600" height="450"></iframe>
-            </div>
+            <div id="interactive-map" class="interactive-map"></div>
+            <button type="button" id="directions-btn" class="map-btn">Get Directions to Head Office</button>
         </section>
 
-        <!-- Contact form for general messages -->
-        <section class="contact-form-section">
+        <!-- Contact Form for General Messages -->
+        <section class="contact-form-section animate-on-scroll">
             <h2>Send a General Message</h2>
-            <form class="contact-form" action="#" method="post">
+            <p>Use this form for general enquiries, feedback, or anything else. We reply within 2 working days.</p>
+            <form class="contact-form" id="contact-form" action="#" method="post" novalidate>
                 <div class="form-group">
                     <label for="contact-name">Your Full Name:</label>
                     <input type="text" id="contact-name" name="contact-name" required>
@@ -81,9 +89,12 @@
                     <textarea id="contact-message" name="contact-message" rows="4" required></textarea>
                 </div>
                 <div class="form-actions">
-                    <button type="submit">Send Message</button>
-                    <button type="reset">Clear Form</button>
+                    <button type="submit" class="submit-button">Send Message</button>
+                    <button type="reset" class="reset-button">Clear Form</button>
                 </div>
+                
+                <!-- JavaScript will inject the email compilation link here -->
+                <div id="contact-response" class="form-response"></div>
             </form>
         </section>
     </main>
@@ -92,5 +103,9 @@
         <p>&copy; 2026 Royal Tech Solutions (Pty) Ltd. All rights reserved.</p>
         <p>Email: info@royaltechsolutions.co.za | Phone: +27 11 234 5678</p>
     </footer>
+
+    <!-- Leaflet JS for the map -->
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <script src="js/script.js"></script>
 </body>
 </html>

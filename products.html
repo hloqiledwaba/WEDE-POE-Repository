@@ -5,16 +5,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Products and Services - Royal Tech Solutions</title>
     <meta name="description" content="Explore Royal Tech Solutions range of professional IT services and high-quality technology products.">
+    <meta name="keywords" content="buy business laptops, IT support services, cloud solutions, network setup, tech accessories">
     <link href="css/style.css" rel="stylesheet">
 </head>
 <body>
     <header class="site-header">
         <div class="logo-area">
             <a href="index.html">
-                <img src="Images/royal-tech-logo.png" alt="Royal Tech Solutions logo" width="150" height="50">
+                <img src="images/royal-tech-logo.png" srcset="images/royal-tech-logo.png 150w" sizes="150px" alt="Royal Tech Solutions logo" width="150" height="50">
             </a>
         </div>
-        <nav>
+        <button class="nav-toggle" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="main-nav">
+            <span class="hamburger-line"></span>
+            <span class="hamburger-line"></span>
+            <span class="hamburger-line"></span>
+        </button>
+        <nav id="main-nav">
             <ul>
                 <li><a href="index.html">Home</a></li>
                 <li><a href="about.html">About</a></li>
@@ -26,47 +32,78 @@
     </header>
 
     <main>
-        <section class="page-intro">
+        <section class="page-intro animate-on-scroll">
             <h1>Our Services and Products</h1>
             <p>Explore our range of professional IT services and high-quality technology products.</p>
         </section>
 
-        <section class="services-grid">
+        <!-- Part 3 Feature: Search Filter -->
+        <section class="search-section animate-on-scroll">
+            <label for="product-search">Search our products and services:</label>
+            <input type="text" id="product-search" placeholder="Type to filter, e.g. laptops, support, cloud...">
+            <p id="no-results" style="display:none;">No products matched your search. Try a different word.</p>
+        </section>
+
+        <!-- Part 3 Feature: Click images for Lightbox -->
+        <section class="services-grid animate-on-scroll">
             <h2>Professional Services</h2>
-            <!-- Using cards to display service info -->
+            
             <article class="service-card">
-                <img src="Images/service-support.png" alt="Technician providing IT support services" width="600" height="400">
+                <img class="gallery-img" src="images/service-support.png" srcset="images/service-support.png 600w" sizes="(max-width: 768px) 100vw, 600px" alt="Technician providing IT support services" width="600" height="400">
                 <h3>IT Support and Maintenance</h3>
                 <p>Comprehensive hardware and software support, both on-site and remotely.</p>
                 <p><strong>Price:</strong> Hourly rate from R450</p>
+                <!-- Part 3 Feature: Accordion -->
+                <button type="button" class="accordion-toggle" aria-expanded="false" aria-controls="service-1-details">Show Service Details</button>
+                <ul class="accordion-content project-details" id="service-1-details">
+                    <li>On-site troubleshooting and repairs</li>
+                    <li>Remote desktop support</li>
+                    <li>Hardware upgrades and replacements</li>
+                    <li>Software configuration and updates</li>
+                </ul>
             </article>
 
             <article class="service-card">
-                <img src="Images/service-networking.png" alt="Network cabling and server installation" width="600" height="400">
+                <img class="gallery-img" src="images/service-networking.png" srcset="images/service-networking.png 600w" sizes="(max-width: 768px) 100vw, 600px" alt="Network cabling and server installation" width="600" height="400">
                 <h3>Network and Server Setup</h3>
                 <p>Design, installation, and management of secure network infrastructures.</p>
                 <p><strong>Price:</strong> Quotation based on requirements</p>
+                <button type="button" class="accordion-toggle" aria-expanded="false" aria-controls="service-2-details">Show Service Details</button>
+                <ul class="accordion-content project-details" id="service-2-details">
+                    <li>Secure Wi-Fi setup</li>
+                    <li>Server installation and maintenance</li>
+                    <li>Network cabling (CAT5/CAT6)</li>
+                    <li>Firewall and security configuration</li>
+                </ul>
             </article>
 
             <article class="service-card">
-                <img src="Images/service-cloud.png" alt="Cloud computing solutions" width="600" height="400">
+                <img class="gallery-img" src="images/service-cloud.png" srcset="images/service-cloud.png 600w" sizes="(max-width: 768px) 100vw, 600px" alt="Cloud computing solutions" width="600" height="400">
                 <h3>Cloud and Data Solutions</h3>
                 <p>Secure cloud migration and data backup solutions for your business.</p>
                 <p><strong>Price:</strong> Monthly subscription options available</p>
+                <button type="button" class="accordion-toggle" aria-expanded="false" aria-controls="service-3-details">Show Service Details</button>
+                <ul class="accordion-content project-details" id="service-3-details">
+                    <li>Cloud storage setup (Google Workspace, Microsoft 365)</li>
+                    <li>Automated data backups</li>
+                    <li>Disaster recovery planning</li>
+                    <li>Data migration services</li>
+                </ul>
             </article>
         </section>
 
-        <section class="products-grid">
+        <section class="products-grid animate-on-scroll">
             <h2>Hardware and Accessories</h2>
+            
             <article class="product-card">
-                <img src="Images/product-laptop.png" alt="Business grade laptop" width="600" height="400">
+                <img class="gallery-img" src="images/product-laptop.png" srcset="images/product-laptop.png 600w" sizes="(max-width: 768px) 100vw, 600px" alt="Business grade laptop" width="600" height="400">
                 <h3>Business Laptops</h3>
                 <p>High-performance laptops for business, education, and creative professionals.</p>
                 <p><strong>Price:</strong> R12,500 - R25,000</p>
             </article>
 
             <article class="product-card">
-                <img src="Images/product-accessories.png" alt="Computer accessories keyboard and mouse" width="600" height="400">
+                <img class="gallery-img" src="images/product-accessories.png" srcset="images/product-accessories.png 600w" sizes="(max-width: 768px) 100vw, 600px" alt="Computer accessories keyboard and mouse" width="600" height="400">
                 <h3>Computer Accessories</h3>
                 <p>Quality accessories including keyboards, mice, monitors, and cables.</p>
                 <p><strong>Price:</strong> R250 - R5,000</p>
@@ -84,5 +121,7 @@
             <a href="https://www.youtube.com/@techcrunch" target="_blank" rel="noopener noreferrer">YouTube</a>
         </div>
     </footer>
+
+    <script src="js/script.js"></script>
 </body>
 </html>

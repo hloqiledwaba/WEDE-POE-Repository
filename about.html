@@ -5,16 +5,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About Us - Royal Tech Solutions</title>
     <meta name="description" content="Learn about Royal Tech Solutions, our mission, vision, and commitment to providing reliable IT solutions.">
+    <meta name="keywords" content="about Royal Tech Solutions, IT company history, tech experts Germiston, reliable IT partner">
     <link href="css/style.css" rel="stylesheet">
 </head>
 <body>
     <header class="site-header">
         <div class="logo-area">
             <a href="index.html">
-                <img src="Images/royal-tech-logo.png" alt="Royal Tech Solutions logo" width="150" height="50">
+                <img src="images/royal-tech-logo.png" srcset="images/royal-tech-logo.png 150w" sizes="150px" alt="Royal Tech Solutions logo" width="150" height="50">
             </a>
         </div>
-        <nav>
+        <button class="nav-toggle" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="main-nav">
+            <span class="hamburger-line"></span>
+            <span class="hamburger-line"></span>
+            <span class="hamburger-line"></span>
+        </button>
+        <nav id="main-nav">
             <ul>
                 <li><a href="index.html">Home</a></li>
                 <li><a href="about.html">About</a></li>
@@ -26,8 +32,7 @@
     </header>
 
     <main>
-        <!-- Gotta start with a strong intro and the core mission -->
-        <section class="company-intro">
+        <section class="company-intro animate-on-scroll">
             <h1>About Royal Tech Solutions</h1>
             <p>Founded in 2022, Royal Tech Solutions (Pty) Ltd has grown into a trusted IT partner for small, medium, and corporate enterprises in South Africa. We are proudly headquartered in Germiston and operate across the region.</p>
             
@@ -36,15 +41,13 @@
             <p><strong>Vision:</strong> To become a trusted IT partner in South Africa by providing quality service and modern technology solutions.</p>
         </section>
 
-        <!-- Let's expand the history section to show the company's roots -->
-        <section class="company-background">
+        <section class="company-background animate-on-scroll">
             <h2>Our History and Journey</h2>
             <p>What started as a small IT consultancy out of a home office in Germiston has scaled into a full-service technology provider within just three years. We recognised early on that small and medium-sized businesses were underserved by large corporate tech firms. By focusing on responsive, personal support, we have been able to grow our reputation organically.</p>
             <p>Today, we continue to give back to the communities we serve, offering mentorship to local IT students and providing affordable tech solutions to educational institutions.</p>
         </section>
 
-        <!-- I'll use an unordered list to neatly display our core values -->
-        <section class="core-values">
+        <section class="core-values animate-on-scroll">
             <h2>Our Core Values</h2>
             <ul>
                 <li><strong>Integrity:</strong> We offer honest advice and transparent pricing, never overcharging our clients.</li>
@@ -54,8 +57,7 @@
             </ul>
         </section>
 
-        <!-- Showcasing our team size and physical reach in Germiston and Makhado -->
-        <section class="team-presence">
+        <section class="team-presence animate-on-scroll">
             <h2>Our Team and Presence</h2>
             <p>We currently employ over <strong>50</strong> dedicated IT professionals, engineers, and support staff across our two main branches:</p>
             <ul>
@@ -65,9 +67,8 @@
             <p>Having successfully serviced over <strong>200 clients</strong>, our team is equipped to handle everything from a single computer repair to a complete network overhaul for a corporate office.</p>
         </section>
 
-        <!-- Adding the founder section with her image -->
-        <section class="founder-section">
-            <img src="Images/founder-sarah.png" alt="Sarah Johnson, Founder and CEO of Royal Tech Solutions" width="150" height="150">
+        <section class="founder-section animate-on-scroll">
+            <img src="images/founder-sarah.png" srcset="images/founder-sarah.png 150w" sizes="150px" alt="Sarah Johnson, Founder and CEO of Royal Tech Solutions" width="150" height="150">
             <div>
                 <h2>Sarah Johnson</h2>
                 <h3>Founder and CEO</h3>
@@ -86,5 +87,7 @@
             <a href="https://www.youtube.com/@techcrunch" target="_blank" rel="noopener noreferrer">YouTube</a>
         </div>
     </footer>
+
+    <script src="js/script.js"></script>
 </body>
 </html>

@@ -5,16 +5,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Enquiry Form - Royal Tech Solutions</title>
     <meta name="description" content="Submit an enquiry for Royal Tech Solutions products or services. Request a quote or ask about IT support.">
+    <meta name="keywords" content="request IT quote, tech support enquiry, network setup quote, buy laptops South Africa">
     <link href="css/style.css" rel="stylesheet">
 </head>
 <body>
     <header class="site-header">
         <div class="logo-area">
             <a href="index.html">
-                <img src="Images/royal-tech-logo.png" alt="Royal Tech Solutions logo" width="150" height="50">
+                <img src="images/royal-tech-logo.png" srcset="images/royal-tech-logo.png 150w" sizes="150px" alt="Royal Tech Solutions logo" width="150" height="50">
             </a>
         </div>
-        <nav>
+        <button class="nav-toggle" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="main-nav">
+            <span class="hamburger-line"></span>
+            <span class="hamburger-line"></span>
+            <span class="hamburger-line"></span>
+        </button>
+        <nav id="main-nav">
             <ul>
                 <li><a href="index.html">Home</a></li>
                 <li><a href="about.html">About</a></li>
@@ -26,14 +32,13 @@
     </header>
 
     <main>
-        <section class="enquiry-intro">
+        <section class="enquiry-intro animate-on-scroll">
             <h1>Request a Quote or Support</h1>
-            <p>Fill out the form below to make an enquiry about our products or services.</p>
+            <p>Fill out the form below to make an enquiry about our products or services. We will get back to you within 48 hours.</p>
         </section>
         
-        <!-- Building the form with proper labels -->
-        <section class="quote-form-section">
-            <form class="quote-form" action="#" method="post">
+        <section class="quote-form-section animate-on-scroll">
+            <form class="quote-form" id="enquiry-form" action="#" method="post" novalidate>
                 <div class="form-group">
                     <label for="fullname">Full Name:</label>
                     <input type="text" id="fullname" name="fullname" placeholder="Enter your full name" required>
@@ -46,10 +51,9 @@
                     <label for="phone">Phone Number:</label>
                     <input type="tel" id="phone" name="phone" placeholder="+27 11 234 5678" required>
                 </div>
-                <!-- Dropdown to select what they want -->
                 <div class="form-group">
                     <label for="interest">I am interested in:</label>
-                    <select id="interest" name="interest">
+                    <select id="interest" name="interest" required>
                         <option value="">Select an option</option>
                         <option value="it-support">IT Support and Maintenance</option>
                         <option value="networking">Network and Server Setup</option>
@@ -60,13 +64,15 @@
                 </div>
                 <div class="form-group">
                     <label for="message">Your Message or Requirements:</label>
-                    <textarea id="message" name="message" rows="5" placeholder="Tell us what you need assistance with..."></textarea>
+                    <textarea id="message" name="message" rows="5" placeholder="Tell us what you need assistance with..." required></textarea>
                 </div>
-                <!-- Buttons to submit or reset -->
                 <div class="form-actions">
-                    <button type="submit">Submit Enquiry</button>
-                    <button type="reset">Clear Form</button>
+                    <button type="submit" class="submit-button">Submit Enquiry</button>
+                    <button type="reset" class="reset-button">Clear Form</button>
                 </div>
+                
+                <!-- JavaScript will inject the success/error message here -->
+                <div id="form-response" class="form-response"></div>
             </form>
         </section>
     </main>
@@ -81,5 +87,7 @@
             <a href="https://www.youtube.com/@techcrunch" target="_blank" rel="noopener noreferrer">YouTube</a>
         </div>
     </footer>
+
+    <script src="js/script.js"></script>
 </body>
 </html>

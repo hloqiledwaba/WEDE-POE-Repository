@@ -5,18 +5,26 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home - Royal Tech Solutions</title>
     <meta name="description" content="Royal Tech Solutions provides affordable, innovative technology support and sales for SMEs, start-ups, and educational institutions in South Africa.">
+    <meta name="keywords" content="IT support South Africa, tech solutions Germiston, network setup Limpopo, business laptops, IT repairs">
     <link href="css/style.css" rel="stylesheet">
 </head>
 <body>
-    <!-- Header with logo and main navigation. I linked the logo to the homepage -->
+    <!-- Header with logo, hamburger button, and navigation -->
     <header class="site-header">
         <div class="logo-area">
             <a href="index.html">
-                <img src="Images/royal-tech-logo.png" alt="Royal Tech Solutions logo" width="150" height="50">
+                <img src="images/royal-tech-logo.png" srcset="images/royal-tech-logo.png 150w" sizes="150px" alt="Royal Tech Solutions logo" width="150" height="50">
             </a>
         </div>
-        <!-- Only one nav element. I used a list so CSS can style it easily -->
-        <nav>
+        
+        <!-- Hamburger menu for mobile -->
+        <button class="nav-toggle" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="main-nav">
+            <span class="hamburger-line"></span>
+            <span class="hamburger-line"></span>
+            <span class="hamburger-line"></span>
+        </button>
+
+        <nav id="main-nav">
             <ul>
                 <li><a href="index.html">Home</a></li>
                 <li><a href="about.html">About</a></li>
@@ -28,9 +36,10 @@
     </header>
 
     <main>
-        <!-- Hero section to grab attention -->
-        <section class="hero-section">
+        <!-- Hero Section -->
+        <section class="hero-section animate-on-scroll">
             <h1>Empowering Your Business with Reliable IT Solutions</h1>
+            <p id="greeting">Welcome to Royal Tech Solutions.</p>
             <p>Royal Tech Solutions provides affordable, innovative technology support and sales for SMEs, start-ups, and educational institutions in South Africa.</p>
             <div class="cta-buttons">
                 <a href="products.html" class="cta-button">View Our Services</a>
@@ -38,8 +47,8 @@
             </div>
         </section>
 
-        <!-- Quick overview of our core services -->
-        <section class="services-overview">
+        <!-- Core Services Overview -->
+        <section class="services-overview animate-on-scroll">
             <h2>Our Core Services</h2>
             <div class="service-grid">
                 <div class="service-item">
@@ -58,7 +67,6 @@
         </section>
     </main>
 
-    <!-- Footer with copyright and social links -->
     <footer class="site-footer">
         <p>&copy; 2026 Royal Tech Solutions (Pty) Ltd. All rights reserved.</p>
         <p>Email: info@royaltechsolutions.co.za | Phone: +27 11 234 5678</p>
@@ -69,5 +77,7 @@
             <a href="https://www.youtube.com/@techcrunch" target="_blank" rel="noopener noreferrer">YouTube</a>
         </div>
     </footer>
+
+    <script src="js/script.js"></script>
 </body>
 </html>
